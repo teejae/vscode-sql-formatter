@@ -45,7 +45,7 @@
             "tsql"
           ],
           "default": "sql",
-          "description": "Which dialect to format with (sql: Standard SQL, n1ql: Couchbase N1QL, db2: IBM DB2, pl/sql: Oracle PL/SQL)"
+          "description": "Which dialect to format with. See https://github.com/zeroturnaround/sql-formatter for supported options"
         },
         "sql-formatter.uppercase": {
           "scope": "resource",
@@ -66,7 +66,8 @@
   "main": "./src/extension.js",
   "scripts": {
     "lint": "eslint .",
-    "format": "prettier --write \"**/*.{js,jsx,md,json,css,prettierrc,eslintrc}\""
+    "format": "prettier --write \"**/*.{js,jsx,md,json,css,prettierrc,eslintrc}\"",
+    "package": "vsce package"
   },
   "devDependencies": {
     "eslint": "^6.6.0",
