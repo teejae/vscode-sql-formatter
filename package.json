@@ -33,10 +33,16 @@
           "scope": "resource",
           "type": "string",
           "enum": [
-            "sql",
-            "n1q1",
             "db2",
-            "pl/sql"
+            "mariadb",
+            "mysql",
+            "n1ql",
+            "plsql",
+            "postgresql",
+            "redshift",
+            "spark",
+            "sql",
+            "tsql"
           ],
           "default": "sql",
           "description": "Which dialect to format with (sql: Standard SQL, n1ql: Couchbase N1QL, db2: IBM DB2, pl/sql: Oracle PL/SQL)"
@@ -44,7 +50,7 @@
         "sql-formatter.uppercase": {
           "scope": "resource",
           "type": "boolean",
-          "default": false,
+          "default": true,
           "description": "Convert keywords to uppercase"
         },
         "sql-formatter.linesBetweenQueries": {
@@ -67,7 +73,8 @@
     "eslint-config-adpyke-es6": "^1.4.13",
     "eslint-config-prettier": "^6.5.0",
     "glob": "^7.1.5",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "vsce": "^2.5.1"
   },
   "dependencies": {
     "sql-formatter": "^4.0.2"
