@@ -2,7 +2,7 @@
   "name": "vscode-sql-formatter",
   "displayName": "SQL Formatter",
   "description": "Format sql files using the sql-formatter npm package",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "publisher": "teejae",
   "repository": {
     "type": "git",
@@ -17,9 +17,16 @@
   "keywords": [
     "sql",
     "formatter",
-    "n1ql",
     "db2",
-    "pl/sql"
+    "mariadb",
+    "mysql",
+    "n1ql",
+    "plsql",
+    "postgresql",
+    "redshift",
+    "spark",
+    "sql",
+    "tsql"
   ],
   "activationEvents": [
     "onLanguage:sql"
