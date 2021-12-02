@@ -2,11 +2,11 @@
   "name": "vscode-sql-formatter",
   "displayName": "SQL Formatter",
   "description": "Format sql files using the sql-formatter npm package",
-  "version": "1.4.4",
-  "publisher": "adpyke",
+  "version": "1.4.5",
+  "publisher": "teejae",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kufii/vscode-sql-formatter.git"
+    "url": "https://github.com/teejae/vscode-sql-formatter.git"
   },
   "engines": {
     "vscode": "^1.38.0"
@@ -33,18 +33,24 @@
           "scope": "resource",
           "type": "string",
           "enum": [
-            "sql",
-            "n1q1",
             "db2",
-            "pl/sql"
+            "mariadb",
+            "mysql",
+            "n1ql",
+            "plsql",
+            "postgresql",
+            "redshift",
+            "spark",
+            "sql",
+            "tsql"
           ],
           "default": "sql",
-          "description": "Which dialect to format with (sql: Standard SQL, n1ql: Couchbase N1QL, db2: IBM DB2, pl/sql: Oracle PL/SQL)"
+          "description": "Which dialect to format with. See https://github.com/zeroturnaround/sql-formatter for supported options"
         },
         "sql-formatter.uppercase": {
           "scope": "resource",
           "type": "boolean",
-          "default": false,
+          "default": true,
           "description": "Convert keywords to uppercase"
         },
         "sql-formatter.linesBetweenQueries": {
@@ -60,16 +66,18 @@
   "main": "./src/extension.js",
   "scripts": {
     "lint": "eslint .",
-    "format": "prettier --write \"**/*.{js,jsx,md,json,css,prettierrc,eslintrc}\""
+    "format": "prettier --write \"**/*.{js,jsx,md,json,css,prettierrc,eslintrc}\"",
+    "package": "vsce package"
   },
   "devDependencies": {
     "eslint": "^6.6.0",
     "eslint-config-adpyke-es6": "^1.4.13",
     "eslint-config-prettier": "^6.5.0",
     "glob": "^7.1.5",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "vsce": "^2.5.1"
   },
   "dependencies": {
-    "sql-formatter-plus": "^1.3.6"
+    "sql-formatter": "^4.0.2"
   }
 }
