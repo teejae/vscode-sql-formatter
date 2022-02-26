@@ -21,7 +21,7 @@ const getConfig = ({ insertSpaces, tabSize }) => ({
 	linesBetweenQueries: getSetting('sql-formatter', 'linesBetweenQueries', 2)
 });
 
-const format = (text, config) => sqlFormatter.format(text, config);
+const format = (text, config) => sqlFormatter.format(text, config) + '\n';
 
 module.exports.activate = () =>
 	vscode.languages.registerDocumentRangeFormattingEditProvider('sql', {
