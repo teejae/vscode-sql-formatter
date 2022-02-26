@@ -2,7 +2,7 @@
   "name": "vscode-sql-formatter",
   "displayName": "SQL Formatter",
   "description": "Format sql files using the sql-formatter npm package",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "publisher": "teejae",
   "repository": {
     "type": "git",
@@ -82,7 +82,7 @@
     "eslint-config-prettier": "^6.5.0",
     "glob": "^7.1.5",
     "prettier": "^1.18.2",
-    "vsce": "^2.5.1"
+    "vsce": "^2.6.7"
   },
   "dependencies": {
     "sql-formatter": "^4.0.2"
